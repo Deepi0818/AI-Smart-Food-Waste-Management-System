@@ -1,21 +1,73 @@
+# ==========================
+# AI Smart Food Waste Platform
+# .gitignore
+# ==========================
+
+# --------------------------
 # Python
+# --------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+
+# Virtual Environment
+venv/
 backend/venv/
-backend/__pycache__/
-*.pyc
-
-# Database
-backend/data/*.db
-
-# Node.js
-frontend/node_modules/
-
-# Environment files
 .env
 .env.*
 
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# --------------------------
+# Flask
+# --------------------------
+instance/
+*.sqlite3
+*.db
+*.log
+
+# Uploads (optional)
+backend/uploads/
+backend/reports/
+backend/qr/
+
+# --------------------------
+# Node.js / React
+# --------------------------
+frontend/node_modules/
+node_modules/
+
+# Build folders
+frontend/dist/
+dist/
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --------------------------
 # VS Code
+# --------------------------
 .vscode/
 
-# OS files
+# --------------------------
+# OS Files
+# --------------------------
 .DS_Store
 Thumbs.db
+
+# --------------------------
+# IDE Files
+# --------------------------
+.idea/
+
+# --------------------------
+# Temporary Files
+# --------------------------
+*.tmp
+*.temp
