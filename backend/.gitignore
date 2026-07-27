@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+data/foodwaste.db
+uploads/*
+!uploads/.gitkeep
+reports/*.pdf
+qr/*.png
+models/*.joblib
+models/*_meta.json
+.env

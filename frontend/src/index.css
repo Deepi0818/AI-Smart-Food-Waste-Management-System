@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(16, 185, 129, 0.06), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.06), transparent 40%),
+    #f8fafc;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/60 shadow-card rounded-xl2;
+  }
+
+  .glass-card:hover {
+    @apply shadow-card-hover;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-semibold text-white
+           bg-gradient-to-r from-emerald-600 to-emerald-500 shadow-md shadow-emerald-600/20
+           hover:from-emerald-700 hover:to-emerald-600 hover:shadow-lg hover:shadow-emerald-600/30
+           active:scale-[0.98] transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-semibold
+           text-royal-700 bg-royal-50 border border-royal-200
+           hover:bg-royal-100 active:scale-[0.98] transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-2.5 text-sm text-slate-800
+           placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40
+           focus:border-emerald-500 transition-all duration-150;
+  }
+
+  .label-text {
+    @apply block text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1.5;
+  }
+
+  .page-title {
+    @apply font-display text-2xl md:text-3xl font-extrabold text-slate-900;
+  }
+
+  .page-subtitle {
+    @apply text-slate-500 mt-1;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-600
+           hover:bg-emerald-50 hover:text-emerald-700 transition-colors duration-150;
+  }
+
+  .sidebar-link-active {
+    @apply bg-gradient-to-r from-emerald-600 to-emerald-500 text-white shadow-md shadow-emerald-600/25
+           hover:from-emerald-700 hover:to-emerald-600 hover:text-white;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(5, 150, 105, 0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
